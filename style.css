@@ -1,6 +1,7 @@
 /* Universal */
 * {
   margin: 0;
+  box-sizing: border-box;
 }
 
 html, body {
@@ -26,20 +27,53 @@ header {
 
 h1 {
   position: absolute;
-  bottom: 50%;
+  bottom: 60%;
   left: 50%;
   transform: translate(-50%, 50%);
+  font-family: 'Proza Libre', sans-serif;
+  text-shadow: 2px 2px 2px #ffffff54, -2px -2px 2px #ffffff54, -2px 2px 2px #ffffff54, 2px -2px 2px #ffffff54;
 }
 
 /* Intro */
-#mobile-hero {
+.mobile-hero {
   width: 100%;
   height: 100%;
   background: center / cover no-repeat url('resources/EditedImages/EmmyBehindCurtainEdited.png');
 }
 
-h2 {
+h3 {
   line-height: 1.5;
   padding: 20rem 0 0 1rem;
+  font-family: 'Proza Libre', sans-serif;
   text-shadow: 1px 1px 2px #fff;
+}
+
+/* Classes or IDs */
+.header {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* Small and Medium Devices */
+
+
+/* Medium-Large and Large Devices */
+@media only screen and (min-width: 800px) {
+  body {
+    max-width: 90rem;
+  }
+  .mobile-hero {
+    display: none;
+  }
+  .desktop-hero {
+    width: 100%;
+    height: 100%;
+    background: left / contain no-repeat url('resources/EditedImages/TallEditEmmyBehindCurtain.jpg');
+    display: block;
+    padding-left: 20rem;
+  }
+
+  h3 {
+    padding: 0 0 0 0;
+  }
 }

@@ -29,7 +29,28 @@ JS functionality ideas:
 	Tic-Tac-Toe
 	Photo Gallery or Concentration
 	
-	Animation of some sort
+	Animation of some sort -	eg. Find Emmy, when mouse over her image she animates larger with transition.
+						eg. transform: rotate 	her image
+						eg. transform: translateX & translate Y	laser pointer to get Emmy to chase it
+							https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions
+							<p>Click anywhere to move the ball</p>
+							<div id="foo" class="ball"></div>
+							const f = document.getElementById('foo');
+							document.addEventListener('click', (ev) => {
+							  f.style.transform = `translateY(${ev.clientY - 25}px)`;
+							  f.style.transform += `translateX(${ev.clientX - 25}px)`;
+							}, false);
+							.ball {
+							  border-radius: 25px;
+							  width: 50px;
+							  height: 50px;
+							  background: #c00;
+							  position: absolute;
+							  top: 0;
+							  left: 0;
+							  transition: transform 1s;
+							}
+
 	Audio
 	Video
 	
