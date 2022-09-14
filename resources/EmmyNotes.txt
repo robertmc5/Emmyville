@@ -1,0 +1,38 @@
+Here are a few photos. I have some videos to send as well. I can send some earlier/older photos from my other laptop too. Let me know what else you need.
+
+Emmy’s full name is Emmeline Pankhurst Scherer McCarter. Named after the famous British suffragette and political activist.
+
+Born March 11, 2009. Adopted in June of 2009. I had been thinking about getting a cat, and then my apartment complex waived the pet adoption fee and had the pet mobile come out to the complex. Of all the kittens available, I knew Emmy was for me because (1) I wanted a different color cat than what I had had before (solid gray and solid black cats) and she was gray and white; (2) I wanted to name her Emmy and her name was Emma; and (3) she was unusual because she had extra toes.
+
+She is a polydactyl cat (has extra toes). The ones in front look like thumbs.
+
+She is an American shorthair. Solid gray on her back, with gray and off-white stripes and spots on her neck and stomach. She has a white patch on her chin and neck.
+
+Very dog-like. Will play fetch for short periods of time, greets me at the door, follows me around. Favorite toys are her stuffed kangaroo and her fishing toy. Loves to swat balls of paper and chase hair ties. Often pushes her toys under a cabinet or behind a bookshelf. Gets the zoomies at certain times of day and does laps around the living room and behind the sofa. Loves boxes and bags. Enjoys hanging out in the bathtub. Likes to play hide and seek. Very cuddly with Mom and enjoys limited footie pets from Dad.
+
+Loves chicken, tuna, sour cream, whipped cream, tartar control treats and Cat Milk. Can hear the lid come off a sour cream or whipped cream container from another room.
+
+Spends a lot of time up on her cat condo or taking morning sun baths behind the curtain. Takes afternoon naps in Mom’s bed. Has a secret lair and a penthouse in Mom’s closet to retreat to when the mood strikes. Goes to her bed around 10 p.m. and sleeps there throughout the night. Brings her fishing toy into Mom’s room around 4 a.m. every night and meows very loudly to try to get someone to play with her.
+
+Nicknames include: Emmycat, Kitten, Little Miss Kitten (her Facebook name), Bubyduders, Kittenduders, Fluff, Fluffy, Marshmallow Fluff, Fatticus Catticus, Miss Fuzzy Butt, Princess Ponytrot, Fuzzy Buttons, Little Bit, the 19-Toed One, Babyfat, Miss Kitten and many, many others!
+
+Emmy nicknames part 2: Squeakers, Squeak Toy Joy, Fluff, Marshmallow Fluffy, Fluffy, Baby Girl, Baby Kitten, Baby Fat, Baby Fluff, Fluffy Muff, Scoochie Booch, Sweetie Good Girl, Sweet Sweet Sweetie, Kitten Mitten, Kitty Mitty, Smitten Kitten, Bubbie Schmubs, Schmoopy, Scoochie Bear
+
+---------------------------------------------------
+
+JS functionality ideas:
+	Name guesser
+	Name spinner
+	Ad libs
+	Magic Eight Ball
+	Rock, Paper, Scissors
+	Tic-Tac-Toe
+	Photo Gallery or Concentration
+	
+	Animation of some sort
+	Audio
+	Video
+	
+	Background? Cat music? Nav bar or Tiles?
+	Responsive
+---------------------------------------------------

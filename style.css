@@ -1,0 +1,45 @@
+/* Universal */
+* {
+  margin: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+}
+
+body {
+  min-width: 20rem;
+  max-width: 30rem;
+  background-color: #e6e6fa;
+  color: #111235;
+  font-family: 'Rubik', sans-serif;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  position: relative;
+  height: 6rem;
+}
+
+h1 {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+/* Intro */
+#mobile-hero {
+  width: 100%;
+  height: 100%;
+  background: center / cover no-repeat url('resources/EditedImages/EmmyBehindCurtainEdited.png');
+}
+
+h2 {
+  line-height: 1.5;
+  padding: 20rem 0 0 1rem;
+  text-shadow: 1px 1px 2px #fff;
+}
