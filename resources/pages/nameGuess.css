@@ -1,0 +1,62 @@
+/* Hero Header */
+.mobile-hero-desktop-header {
+  min-height: 0;
+}
+
+h1 {
+  padding: 5.25rem 1rem 0;
+  width: 10.5rem;
+  text-shadow: 2px 2px 2px #ffffff54, -2px -2px 2px #ffffff54, -2px 2px 2px #ffffff54, 2px -2px 2px #ffffff54;
+}
+
+/* Intro */
+#intro h3 {
+  width: 20rem;
+}
+
+/* Game Header */
+.game-header {
+  border-top: 32px solid #bbbbcc;
+  background-color: lightskyblue;
+}
+
+/* Game Section */
+#games {
+  border-top: none;
+  background-color: lightskyblue;
+}
+
+/* Medium-Large and Large Devices */
+@media only screen and (min-width: 800px) {
+  .desktop-bg {
+    background: lightskyblue left / contain no-repeat url('../images/TallEditEmmyBehindCurtain.jpg');
+  }
+  .mobile-hero-desktop-header {
+    height: auto;
+  }
+  h1 {
+    padding: 5.25rem 1rem 0 4rem;
+    width: 10.5rem;
+    display: inline-block;
+  }
+  #intro {
+    display: inline-block;
+  }
+  #intro h3 {
+    width: 38rem;
+    padding: 1rem 0 0 9rem;
+  }
+  .game-header {
+    border-top: none;
+    background-color: transparent;
+  }
+  .game-header h2 {
+    width: 33rem;
+    margin-left: 36%;
+    color: #1f1f1f;
+    text-shadow: none;
+  }
+  #games {
+    background-color: transparent;
+  }
+}
