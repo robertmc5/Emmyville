@@ -74,17 +74,15 @@ h1 {
     background-color: transparent;
     padding: 0 1rem 42px 19.5rem;
   }
-  .names-display {
+  .names-display {                      /* Switch order */
     display: inline-block;
     width: 49%;
-
-
+    position: relative;
   }
-  .user-cta {
+  .user-cta {                      /* Switch order */
     margin-top: 0;
     display: inline-block;
     width: 50%;
-
   }
 }
  
