@@ -25,19 +25,10 @@ h1 {
   border-top: none;
   padding: 0 1rem 42px;
   background-color: lightskyblue;
-  height: auto;
-}
-
-.names-display,
-.user-cta {
-  border: thin solid slategray;
   width: 100%;
   height: 466px;
   position: relative;
-}
-
-.user-cta {
-  margin-top: 1rem;
+  font-family: 'Rubik', sans-serif;
 }
 
 /* Medium-Large and Large Devices */
@@ -74,15 +65,7 @@ h1 {
   #games {
     background-color: transparent;
     padding: 0 1rem 42px 19.5rem;
-  }
-  .names-display {                      /* Switch order */
-    display: inline-block;
-    width: 49%;
-  }
-  .user-cta {                      /* Switch order */
-    margin-top: 0;
-    display: inline-block;
-    width: 50%;
+    height: 508px;
   }
 }
  
