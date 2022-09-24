@@ -103,17 +103,24 @@ async function playGame() {
         bottom ? showAName.style.bottom = '95%' : showAName.style.bottom = '7%';
       }
       if (!verticle) {
-        right ? showAName.style.right = '40%' : showAName.style.right = '2%';
+        right ? showAName.style.right = '37%' : showAName.style.right = '2%';
       }
       showAName.style.transform = 'rotate(5deg)';
     }, 20)
     await delay(1180);
     showPlace.removeChild(showPlace.lastElementChild);
     counter ++;                          /* TODO */
-    if (counter === 30) {             /* TODO */
+    if (counter === 2) {             /* TODO */
       gameActive = false;
     }
   }
 }
 
+// Invoke the game function
 playGame();
+
+// Register event listener for clicking the Play Again button
+document.getElementById('go').addEventListener('click', printResults);
+
+// Register event listener for clicking the Main Menu button
+document.getElementById('goToMain').addEventListener('click', printResults);

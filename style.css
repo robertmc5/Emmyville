@@ -64,7 +64,6 @@ h1 {
   border-top: 32px solid #bbbbcc;
   background-color: #e6e6fa;
   padding: 1rem 1rem 42px;
-  height: 492px;
 }
 
 /* Small and Medium Devices */
@@ -117,5 +116,6 @@ h1 {
     border-top: none;
     background-color: transparent;
     padding-left: 19.5rem;
+    height: 492px;
   }
 }

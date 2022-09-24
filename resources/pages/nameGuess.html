@@ -33,10 +33,24 @@
         You get three tries.</h2>
     </div>
     <div id="games">
-      <p>This is a sentence.</p>      <!-- TODO -->
-      <form onsubmit="false">
-        <p>This is inside a form.</p>      <!-- TODO -->
+      <form onsubmit="return false">
+        <label for="guess1">1st Guess:</label>
+        <div>
+          <input type="text" id="guess1" required>
+          <input type="button" value="Enter">
+        </div>
+          <!-- <p>Nope. That's not it.</p>                   Temporary -->
+        <label for="guess2" id="label2">2nd Guess:</label>
+        <input type="text" id="guess2" required>
+          <!-- <p>No. Sorry.</p>                               Temporary -->
+        <label for="guess3" id="label3">3rd Guess:</label>
+        <input type="text" id="guess3" required>
+          <!-- <p>Awww. No, not this time.</p>                   Temporary
+          <p id="setupAnswer" >The nickname I was thinking of was:</p>           Temporary ?
+          <p id="answer">Bubbyduders</p>                   Temporary -->
       </form>
+      <a href="nameGuess.html#games" onclick="location.reload()" id="playAgain" >Play Again</a>
+      <a href="../../index.html" id="goToMain" >Main Menu</a>
     </div>
   </div>
 
