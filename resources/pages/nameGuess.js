@@ -29,6 +29,7 @@ const nameGroup = () => {
 }
 
 // Function chooses the name to guess for this game and assigns the name group
+let winner;
 const pickNameAndGroup = () => {
   chosenGroup = nameGroup();
   let randomName = Math.floor(Math.random() * 6);
@@ -54,10 +55,10 @@ function displayDirection(e) {
 }
 
 // Function to play game
+let gameActive = true;
 async function playGame() {
-  counter = 0;                          /* TODO */
-  let winner = pickNameAndGroup();
-  let gameActive = true;
+  counter = 0;                                           /* TODO */
+  pickNameAndGroup(); winner = 'Fluff';                   /* PUT BACK */
   let showPlace = document.getElementById('games');
   let randomName;
   let showAName;
@@ -119,8 +120,54 @@ async function playGame() {
 // Invoke the game function
 playGame();
 
-// Register event listener for clicking the Play Again button
-document.getElementById('go').addEventListener('click', printResults);
+// Function to check for winning guess
+const checkForWinner = (guess) => {
+  return guess.toLowerCase() === winner.toLowerCase() ? true : false;
+}
 
-// Register event listener for clicking the Main Menu button
-document.getElementById('goToMain').addEventListener('click', printResults);
+// Function to inform of a winning guess
+let messagePlace = document.getElementsByTagName('form')[0];
+const showWinner = () => {
+  let winnerMessage = document.createElement('p');
+  winnerMessage.innerHTML = "Yes! You got it! <br> <span>YOU WIN!</span> <br> Congratulations!";
+  winnerMessage.style.fontSize = '1.25rem';
+  winnerMessage.style.color = 'black';
+  messagePlace.appendChild(winnerMessage);
+  let innerWinner = winnerMessage.querySelector('span');
+  innerWinner.style.fontSize = '1.5rem';
+  innerWinner.style.color = 'white';
+  innerWinner.style.textShadow = '1px 1px 1px black';
+}
+
+// Submit guess
+const enterBtn = (e) => {
+  if (e.target.id === 'btn1') {
+    if (checkForWinner(guess1.value)) {
+      gameActive = false;
+      document.getElementById('guess1').style.backgroundColor = ('rgb(204, 230, 204)');
+      document.getElementById('btn1').removeEventListener('click', enterBtn);
+      showWinner();
+    }
+    else {
+      document.getElementById('btn1').removeEventListener('click', enterBtn);
+      document.getElementById('btn1').style.backgroundColor = ('rgb(169, 169, 169)');
+      document.getElementById('guess1').style.backgroundColor = ('rgb(255, 204, 204)');
+      let firstNoMessage = document.createElement('p');
+      firstNoMessage.innerHTML = "Nope. That's not it.";
+      messagePlace.appendChild(firstNoMessage);
+      setTimeout(() => {
+      document.getElementById('label2').style.display = 'block';
+      document.getElementById('guess2').style.display = 'inline-block';
+      document.getElementById('btn2').style.display = 'inline-block';
+      }, 1200)
+    }
+  }
+}
+
+// Register event listeners for clicking the Enter buttons
+document.getElementById('btn1').addEventListener('click', enterBtn);
+document.getElementById('btn2').addEventListener('click', enterBtn);
+document.getElementById('btn3').addEventListener('click', enterBtn);
+
+// Register event listener for pressing KEYS
+document.getElementById('goToMain').addEventListener('click', enterKey);

@@ -52,7 +52,7 @@ form input[type='button'] {
   font-size: 0.8125rem;
   height: 31px;
   vertical-align: top;
-  background-color: cornflowerblue;
+  background-color: cornflowerblue;          /* TODO - turn gray when answer wrong, stop listening */
   color: white;
 }
 
@@ -96,23 +96,23 @@ form p {                                          /* TEMPORARY */
   margin-top: 1.5rem;                          /* MAY ADJUST */
   font-size: 1rem;
   font-family: 'Rubik', sans-serif;
-  background: linear-gradient(135deg, rgb(255,0,0) 0%, rgb(171,0,0) 100%);
+  background: linear-gradient(135deg, rgb(255, 0, 0) 0%, rgb(171, 0, 0) 100%);
   color: white;
   text-shadow: 1px 1px black;
 }
 
 #games > #playAgain {
-  background: linear-gradient(135deg, rgb(0,179,0) 0%, rgb(0,122,0) 100%);
+  background: linear-gradient(135deg, rgb(0, 179, 0) 0%, rgb(0, 122, 0) 100%);
   margin-right: 1.5rem;
 }
 
 #games > a:hover {
-  background: rgb(255,0,0);
+  background: rgb(255, 0, 0);
   cursor: pointer;
 }
 
 #games > #playAgain:hover {
-  background: rgb(0,179,0);
+  background: rgb(0, 179, 0);
   cursor: pointer;
 }
 
@@ -126,8 +126,8 @@ form p {                                          /* TEMPORARY */
   text-shadow: 1px 1px 1px darkslategray;
 }
 
-#label2, #guess2,
-#label3, #guess3 {
+#label2, #guess2, #btn2,
+#label3, #guess3, #btn3 {
   display: none;
 }
 
