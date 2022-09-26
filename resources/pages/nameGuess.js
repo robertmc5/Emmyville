@@ -9,7 +9,7 @@ const emmyNames3 = [
   'Kittenduders', 'Little Bit', 'Scoochie Bear', 'Kitten', 'Fluffy Muff', 'Squeaky Reminder'
 ];
 const emmyNames4 = [
-  'Smitten Kitten', 'Baby Fat', 'Marshmellow Fluff', 'Squeak Toy Joy', 'The 19-Toed One', 'Emmycat'
+  'Smitten Kitten', 'Baby Fat', 'Marshmallow Fluff', 'Squeak Toy Joy', 'The 19-Toed One', 'Emmycat'
 ];
 const emmyNames5 = [
   'Squeakers', 'Kitten Mitten', 'Bubbie Schmubs', 'Fatticus Catticus', 'Baby Girl', 'Fluff'
