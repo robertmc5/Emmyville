@@ -1,4 +1,4 @@
-// Three sets of names to pick from
+// Five sets of names to pick from
 const emmyNames1 = [
   'Baby Kitten', 'Bubby Cubs', 'Schmoopy', 'Fuzzy Butt', 'Princess Ponytrot', 'Kitty Mitty'
 ];
@@ -37,14 +37,14 @@ const pickNameAndGroup = () => {
   return chosenName;
 }
 
-// Helper function for delay in game play
+// Helper function for delay in order to see display of name options across screen
 function delay(ms) {
   return new Promise (resolve => {
     setTimeout(() => {resolve('')}, ms);
   })
 }
 
-// Helper function for display of names relative to viewport width
+// Helper function for display direction of names relative to viewport width
 function displayDirection(e) {
   if (e.matches) {
     verticle = true;
@@ -95,22 +95,23 @@ async function playGame() {
       showAName.style.right = '10%';
     }
     if (!verticle) {
-      showAName.style.bottom = '75%';
+      showAName.style.top = '3rem';
       right ? showAName.style.right = '4%' : showAName.style.right = '75%';
     }
     showPlace.appendChild(showAName);
-    showAName.style.transition = 'all 1.5s ease';
+    showAName.style.transition = 'all 1.2s ease';
     setTimeout(() => {
       showAName.style.fontSize = '1.5rem';
       if (verticle) {
         bottom ? showAName.style.bottom = '95%' : showAName.style.bottom = '7%';
       }
       if (!verticle) {
-        right ? showAName.style.right = '35%' : showAName.style.right = '2%';
+        right ? showAName.style.right = '35%' : showAName.style.right = '4%';
       }
-      showAName.style.transform = 'rotate(5deg)';
+      showAName.style.transform = 'rotate(0deg)';
+      showAName.style.transition = 'all 1.2s ease';
     }, 20)
-    await delay(1180);
+    await delay(1400);
     showPlace.removeChild(showPlace.lastElementChild);
   }
 }
