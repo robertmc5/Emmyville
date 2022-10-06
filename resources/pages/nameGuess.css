@@ -28,6 +28,7 @@ h1 {
   width: 100%;
   position: relative;
   font-size: 0;
+  display: block;
 }
 
 form {
