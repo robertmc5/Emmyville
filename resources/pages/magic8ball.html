@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Proza+Libre:wght@700&display=swap" rel="stylesheet">
+  <title>Emmyville Magic 8-ball</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="magic8ball.css">
+  <script src="magic8ball.js" defer></script>
+</head>
+<body>
+  
+  <div class="desktop-bg">
+    <div class="mobile-hero-desktop-header">
+      <h1>Magic 8-ball</h1>
+      <div id="intro">
+        <h3>Have a question maybe?
+          Do you wonder how
+          something may turn out?
+          Ask the Emmy 8-ball.
+          She'll give you an answer.</h3>
+      </div>
+      <div id="eight-ball">
+        <div class="game-header">
+          <h2>Ask a question that
+            has a yes or no answer.
+            Let's see what we find.</h2>
+        </div>
+        <div id="games">
+          <form onsubmit="return false">
+            <label for="guess1">1st Guess:</label>
+            <input type="text" id="guess1">
+            <input type="button" id="btn1" value="Enter">
+            <label for="guess2" id="label2">2nd Guess:</label>
+            <input type="text" id="guess2">
+            <input type="button" id="btn2" value="Enter">
+            <label for="guess3" id="label3">3rd Guess:</label>
+            <input type="text" id="guess3">
+            <input type="button" id="btn3" value="Enter">
+            <p id="setupAnswer">The nickname I was thinking of was:</p>
+          </form>
+          <a href="nameGuess.html#games" onclick="location.reload()" id="playAgain" >Play Again</a>
+          <a href="../../index.html#games" id="goToMain" >Main Menu</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

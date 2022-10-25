@@ -1,0 +1,189 @@
+
+body {
+  background-color: lightcoral;
+}
+
+/* Hero Header */
+.mobile-hero-desktop-header {
+  min-height: 0;
+  background: center / cover no-repeat url('../images/EmmyPrincessLeiaCropped.png');
+}
+
+h1 {
+  padding: 5.25rem 1rem 0;
+  width: 10.5rem;
+  text-shadow: 2px 2px 2px #ffffff54, -2px -2px 2px #ffffff54, -2px 2px 2px #ffffff54, 2px -2px 2px #ffffff54;
+}
+
+/* Intro */
+#intro h3 {
+  width: 18rem;
+}
+
+#eight-ball {
+  background: transparent bottom / contain no-repeat url('../images/Eight-ball_640x636.png');
+}
+
+/* Game Header */
+.game-header {
+  border-top: 32px solid #bbbbcc;
+  background-color: lightcoral;
+}
+
+/* Game Section */
+#games {
+  border-top: none;
+  padding: 0 1rem 42px;
+  background-color: lightcoral;
+  width: 100%;
+  position: relative;
+  font-size: 0;
+  display: block;
+}
+
+form {
+  padding-top: 8rem;
+}
+
+form label {
+  display: block;
+  padding: 0.5rem 0 0.25rem;
+  font-family: 'Rubik', sans-serif;
+  font-size: 1rem;
+}
+
+form input {
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+  font-family: 'Rubik', sans-serif;
+}
+
+form input[type='button'] {
+  border: none;
+  padding: 0.25rem;
+  font-size: 0.8125rem;
+  height: 31px;
+  vertical-align: top;
+  background-color: cornflowerblue;
+  color: white;
+}
+
+form input[type='button']:hover {
+  background-color: rgb(111, 121, 235);
+  cursor: pointer;
+}
+
+form input[type='button']:active {
+  background-color: rgb(30, 144, 255)
+}
+
+form p {
+  padding: 0.5rem 0.625rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: darkred;
+}
+
+#setupAnswer {
+  padding: 0.5rem 0 0.25rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #1f1f1f;
+}
+
+#answer {
+  padding: 0.75rem 0.625rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+#games > a {
+  text-decoration: none;
+  border-radius: 7px;
+  border: thin solid darkslategray;
+  padding: 0.375rem 0.75rem;
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  font-family: 'Rubik', sans-serif;
+  background: linear-gradient(135deg, rgb(255, 0, 0) 0%, rgb(171, 0, 0) 100%);
+  color: white;
+  text-shadow: 1px 1px black;
+}
+
+#games > #playAgain {
+  background: linear-gradient(135deg, rgb(0, 179, 0) 0%, rgb(0, 122, 0) 100%);
+  margin-right: 1.5rem;
+}
+
+#games > a:hover {
+  background: rgb(255, 0, 0);
+  cursor: pointer;
+}
+
+#games > #playAgain:hover {
+  background: rgb(0, 179, 0);
+  cursor: pointer;
+}
+
+#games > a:active {
+  box-shadow: inset 2px 2px 3px rgb(171, 0, 0);
+  text-shadow: 1px 1px 1px darkslategray;
+}
+
+#games > #playAgain:active {
+  box-shadow: inset 2px 2px 3px rgb(0, 122, 0);
+  text-shadow: 1px 1px 1px darkslategray;
+}
+
+#label2, #guess2, #btn2,
+#label3, #guess3, #btn3,
+#setupAnswer {
+  display: none;
+}
+
+/* Medium-Large and Large Devices */
+@media only screen and (min-width: 800px) {
+  .desktop-bg {
+    background: transparent left / contain no-repeat url('../images/TallEditEmmyPrincessLeia.jpg');
+  }
+  .mobile-hero-desktop-header {
+    background: transparent;
+    min-height: 0;
+    height: auto;
+  }
+  h1 {
+    padding: 5.25rem 1rem 0 4rem;
+    width: 10.5rem;
+    display: inline-block;
+  }
+  #intro {
+    display: inline-block;
+  }
+  #intro h3 {
+    width: 25rem;
+    padding: 1rem 0 0 9rem;
+  }
+  .game-header {
+    border-top: none;
+    background-color: transparent;
+  }
+  .game-header h2 {
+    width: 30rem;
+    margin-left: 38%;
+    padding: 2.5rem 0 1.5rem;
+    color: #1f1f1f;
+    text-shadow: none;
+  }
+  #games {
+    background-color: transparent;
+    padding: 0 1rem 42px 19.5rem;
+    height: 508px;
+  }
+  form {
+    padding-top: 0;
+  }
+}
+ 
