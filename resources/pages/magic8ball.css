@@ -1,33 +1,42 @@
-
-body {
-  background-color: lightcoral;
-}
-
 /* Hero Header */
 .mobile-hero-desktop-header {
-  min-height: 0;
-  background: center / cover no-repeat url('../images/EmmyPrincessLeiaCropped.png');
+  min-height: 1024px;
+  background: center / cover no-repeat url('../images/EmmyPrincessLeiaCroppedII.jpg');
+  position: relative;
 }
 
 h1 {
-  padding: 5.25rem 1rem 0;
-  width: 10.5rem;
+  width: 6.5rem;
+  margin-inline: auto;
+  padding: 1rem 0 0 0;
   text-shadow: 2px 2px 2px #ffffff54, -2px -2px 2px #ffffff54, -2px 2px 2px #ffffff54, 2px -2px 2px #ffffff54;
 }
 
 /* Intro */
 #intro h3 {
   width: 18rem;
+  margin-top: 45.5rem;
 }
 
 #eight-ball {
-  background: transparent bottom / contain no-repeat url('../images/Eight-ball_640x636.png');
+  width: 12.5rem;
+  position: absolute;
+  top: 648px;
+  right: 2.5rem;
+}
+
+#eight-ball img {
+  width: 100%;
 }
 
 /* Game Header */
 .game-header {
   border-top: 32px solid #bbbbcc;
   background-color: lightcoral;
+}
+
+.game-header h2 {
+  padding: 0.75rem 0 0.75rem;
 }
 
 /* Game Section */
@@ -42,7 +51,8 @@ h1 {
 }
 
 form {
-  padding-top: 8rem;
+  padding-top: 0;
+  text-align: center;
 }
 
 form label {
@@ -56,6 +66,10 @@ form input {
   padding: 0.25rem 0.5rem;
   font-size: 1rem;
   font-family: 'Rubik', sans-serif;
+}
+
+form input[type='text'] {
+  width: 15.4375rem;
 }
 
 form input[type='button'] {
@@ -84,19 +98,23 @@ form p {
   color: darkred;
 }
 
-#setupAnswer {
+/* #setupAnswer {
   padding: 0.5rem 0 0.25rem;
   font-size: 1rem;
   font-weight: 400;
   color: #1f1f1f;
-}
+} */
 
-#answer {
+/* #answer {
   padding: 0.75rem 0.625rem;
   font-size: 1.25rem;
   font-weight: 700;
   color: white;
   text-shadow: 1px 1px 1px black;
+} */
+
+#answer {
+  height: 280px;
 }
 
 #games > a {
@@ -147,11 +165,10 @@ form p {
 /* Medium-Large and Large Devices */
 @media only screen and (min-width: 800px) {
   .desktop-bg {
-    background: transparent left / contain no-repeat url('../images/TallEditEmmyPrincessLeia.jpg');
+    background: lightcoral left / contain no-repeat url('../images/TallEditEmmyPrincessLeia.jpg');
   }
   .mobile-hero-desktop-header {
     background: transparent;
-    min-height: 0;
     height: auto;
   }
   h1 {
@@ -159,8 +176,12 @@ form p {
     width: 10.5rem;
     display: inline-block;
   }
-  #intro {
+  #intro,
+  #eight-ball {
     display: inline-block;
+  }
+  #eight-ball img {
+    padding-top: 1.5rem;
   }
   #intro h3 {
     width: 25rem;
@@ -184,6 +205,10 @@ form p {
   }
   form {
     padding-top: 0;
+    text-align: left;
+  }
+  form input[type='text'] {
+    width: 25rem;
   }
 }
  

@@ -18,6 +18,9 @@
   <div class="desktop-bg">
     <div class="mobile-hero-desktop-header">
       <h1>Magic 8-ball</h1>
+      <div id="eight-ball">
+        <img src="../images/Eight-ball_640x636.png" alt="Billiards eight ball">
+      </div>
       <div id="intro">
         <h3>Have a question maybe?
           Do you wonder how
@@ -25,30 +28,24 @@
           Ask the Emmy 8-ball.
           She'll give you an answer.</h3>
       </div>
-      <div id="eight-ball">
-        <div class="game-header">
-          <h2>Ask a question that
-            has a yes or no answer.
-            Let's see what we find.</h2>
-        </div>
-        <div id="games">
-          <form onsubmit="return false">
-            <label for="guess1">1st Guess:</label>
-            <input type="text" id="guess1">
-            <input type="button" id="btn1" value="Enter">
-            <label for="guess2" id="label2">2nd Guess:</label>
-            <input type="text" id="guess2">
-            <input type="button" id="btn2" value="Enter">
-            <label for="guess3" id="label3">3rd Guess:</label>
-            <input type="text" id="guess3">
-            <input type="button" id="btn3" value="Enter">
-            <p id="setupAnswer">The nickname I was thinking of was:</p>
-          </form>
-          <a href="nameGuess.html#games" onclick="location.reload()" id="playAgain" >Play Again</a>
-          <a href="../../index.html#games" id="goToMain" >Main Menu</a>
-        </div>
+      <div class="game-header">
+        <h2>Ask a question that
+          has a yes or no answer.
+          Let's see what we find.</h2>
       </div>
     </div>
+    <div id="games">
+      <form onsubmit="return false">
+        <label for="question">Your Question:</label>
+        <input type="text" id="question">
+        <input type="button" id="btn1" value="Enter">
+      </form>
+      <div id="answer">
+      </div>
+      <a href="nameGuess.html#games" onclick="location.reload()" id="playAgain" >Play Again</a>
+      <a href="../../index.html#games" id="goToMain" >Main Menu</a>
+    </div>
+    
   </div>
 
 </body>
