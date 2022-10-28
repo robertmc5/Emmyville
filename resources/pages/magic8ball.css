@@ -1,7 +1,7 @@
 /* Hero Header */
 .mobile-hero-desktop-header {
-  min-height: 1024px;
-  background: center / cover no-repeat url('../images/EmmyPrincessLeiaCroppedII.jpg');
+  min-height: 1004px;
+  background: center / cover no-repeat url('../images/EmmyPrincessLeiaCropped.jpg');
   position: relative;
 }
 
@@ -21,7 +21,7 @@ h1 {
 #eight-ball {
   width: 12.5rem;
   position: absolute;
-  top: 648px;
+  top: 40.5rem;
   right: 2.5rem;
 }
 
@@ -31,7 +31,7 @@ h1 {
 
 /* Game Header */
 .game-header {
-  border-top: 32px solid #bbbbcc;
+  border-top: 2rem solid #bbbbcc;
   background-color: lightcoral;
 }
 
@@ -42,7 +42,7 @@ h1 {
 /* Game Section */
 #games {
   border-top: none;
-  padding: 0 1rem 42px;
+  padding: 0 1rem 2.625rem;
   background-color: lightcoral;
   width: 100%;
   position: relative;
@@ -114,7 +114,7 @@ form p {
 } */
 
 #answer {
-  height: 280px;
+  height: 14.375rem;
 }
 
 #games > a {
@@ -162,30 +162,32 @@ form p {
   display: none;
 }
 
-/* Medium-Large and Large Devices */
-@media only screen and (min-width: 800px) {
+/* Medium-Large and Large Devices ============================================*/
+@media only screen and (min-width: 50rem) {
   .desktop-bg {
     background: lightcoral left / contain no-repeat url('../images/TallEditEmmyPrincessLeia.jpg');
   }
   .mobile-hero-desktop-header {
     background: transparent;
-    height: auto;
+    min-height: 0;
+    height: 172px;
   }
   h1 {
     padding: 5.25rem 1rem 0 4rem;
     width: 10.5rem;
     display: inline-block;
   }
-  #intro,
-  #eight-ball {
+  #intro {
     display: inline-block;
   }
-  #eight-ball img {
-    padding-top: 1.5rem;
+  #eight-ball {
+    top: 1rem;
+    left: 35.5rem;
   }
   #intro h3 {
     width: 25rem;
     padding: 1rem 0 0 9rem;
+    margin-top: 0;
   }
   .game-header {
     border-top: none;
@@ -194,14 +196,14 @@ form p {
   .game-header h2 {
     width: 30rem;
     margin-left: 38%;
-    padding: 2.5rem 0 1.5rem;
+    padding: 3.5rem 0 1.5rem;
     color: #1f1f1f;
     text-shadow: none;
   }
   #games {
     background-color: transparent;
-    padding: 0 1rem 42px 19.5rem;
-    height: 508px;
+    padding: 0 1rem 2.625rem 19.5rem;
+    height: 30.75rem;
   }
   form {
     padding-top: 0;
@@ -209,6 +211,9 @@ form p {
   }
   form input[type='text'] {
     width: 25rem;
+  }
+  #answer {
+    height: 19.375rem;
   }
 }
  
