@@ -10,8 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Proza+Libre:wght@700&display=swap" rel="stylesheet">
   <title>Emmyville Magic 8-ball</title>
   <link rel="stylesheet" href="../../styles.css">
-  <link rel="stylesheet" href="magic8ball.css">
-  <script src="magic8ball.js" defer></script>
+  <link rel="stylesheet" href="./magic8ball.css">
+  <script src="./magic8ball.js" defer></script>
 </head>
 <body>
   
@@ -34,19 +34,17 @@
         has a yes or no answer.
         Let's see what we find.</h2>
     </div>
-
     <div id="games">
       <form onsubmit="return false">
         <label for="question">Your Question:</label>
         <input type="text" id="question">
-        <input type="button" id="btn1" value="Enter">
+        <input type="button" id="btn" value="Enter">
       </form>
       <div id="answer">
       </div>
       <a href="magic8ball.html#games" onclick="location.reload()" id="playAgain" >Play Again</a>
       <a href="../../index.html#games" id="goToMain" >Main Menu</a>
     </div>
-    
   </div>
 
 </body>

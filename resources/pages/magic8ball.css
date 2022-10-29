@@ -1,6 +1,136 @@
+/* Animation at-rules */
+@keyframes shaky {
+  0% {
+    transform: scale(0.75) translate(-50%, -50%);
+    opacity: 0;
+  }
+  5% {
+    transform: scale(0.85) translate(-62%, -60%);
+    opacity: 0.45;
+  }
+  10% {
+    transform: scale(0.85) translate(-40%, -45%);
+    opacity: 0.05;
+  }
+  15% {
+    transform: scale(0.85) translate(-35%, -67%);
+    opacity: 0.3;
+  }
+  20% {
+    transform: scale(0.95) translate(-45%, -35%);
+    opacity: 0.1;
+  }
+  25% {
+    transform: scale(0.85) translate(-65%, -40%);
+    opacity: 0.33;
+  }
+  30% {
+    transform: scale(1.05) translate(-55%, -70%);
+    opacity: 0.17;
+  }
+  35% {
+    transform: scale(0.85) translate(-55%, -45%);
+    opacity: 0.25;
+  }
+  40% {
+    transform: scale(0.85) translate(-30%, -40%);
+    opacity: 0.10;
+  }
+  45% {
+    transform: scale(0.85) translate(-45%, -62%);
+    opacity: 0.2;
+  }
+  50% {
+    transform: scale(0.65) translate(-70%, -30%);
+    opacity: 0.15;
+  }
+  55% {
+    transform: scale(0.85) translate(-55%, -55%);
+    opacity: 0.3;
+  }
+  60% {
+    transform: scale(0.95) translate(-30%, -60%);
+    opacity: 0.15;
+  }
+  65% {
+    transform: scale(0.85) translate(-60%, -35%);
+    opacity: 0.2;
+  }
+  70% {
+    transform: scale(0.75) translate(-65%, -67%);
+    opacity: 0.05;
+  }
+  75% {
+    transform: scale(0.85) translate(-70%, -50%);
+    opacity: .35;
+  }
+  80% {
+    transform: scale(0.85) translate(-33%, -30%);
+    opacity: 0.2;
+  }
+  85% {
+    transform: scale(0.85) translate(-40%, -55%);
+    opacity: 0.25;
+  }
+  90% {
+    transform: scale(0.95) translate(-35%, -37%);
+    opacity: 0.05;
+  }
+  95% {
+    transform: scale(1) translate(-50%, -50%);
+    opacity: 0.33;
+  }
+  100% {
+    transform: scale(1) translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+
+@keyframes verticalOscillate {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  8.3% {
+    transform: translate(-50%, -40%);
+  }
+  16.7% {
+    transform: translate(-50%, -30%);
+  }
+  25% {
+    transform: translate(-50%, -20%);
+  }
+  33.3% {
+    transform: translate(-50%, -30%);
+  }
+  41.7% {
+    transform: translate(-50%, -40%);
+  }
+  50% {
+    transform: translate(-50%, -50%);
+  }
+  58.3% {
+    transform: translate(-50%, -60%);
+  }
+  66.7% {
+    transform: translate(-50%, -70%);
+  }
+  75% {
+    transform: translate(-50%, -80%);
+  }
+  83.3% {
+    transform: translate(-50%, -70%);
+  }
+  91.7% {
+    transform: translate(-50%, -60%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
 /* Hero Header */
 .mobile-hero-desktop-header {
-  min-height: 1004px;
+  min-height: 62.75rem;
   background: center / cover no-repeat url('../images/EmmyPrincessLeiaCropped.jpg');
   position: relative;
 }
@@ -45,8 +175,8 @@ h1 {
   padding: 0 1rem 2.625rem;
   background-color: lightcoral;
   width: 100%;
-  position: relative;
   font-size: 0;
+  font-family: 'Rubik', sans-serif;
   display: block;
 }
 
@@ -91,32 +221,37 @@ form input[type='button']:active {
   background-color: rgb(30, 144, 255)
 }
 
-form p {
-  padding: 0.5rem 0.625rem;
-  font-size: 1rem;
-  font-weight: 700;
-  color: darkred;
-}
-
-/* #setupAnswer {
-  padding: 0.5rem 0 0.25rem;
-  font-size: 1rem;
-  font-weight: 400;
-  color: #1f1f1f;
-} */
-
-/* #answer {
-  padding: 0.75rem 0.625rem;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: white;
-  text-shadow: 1px 1px 1px black;
-} */
-
 #answer {
   height: 14.375rem;
+  position: relative;
 }
 
+/* Animations */
+#magicBall {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: shaky 1s;
+}
+
+#catFace {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: shaky 1s 1s;
+}
+
+#answerText {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: shaky 1s 2s forwards, verticalOscillate 2s 3s infinite;
+}
+
+/* Nav buttons */
 #games > a {
   text-decoration: none;
   border-radius: 7px;
@@ -156,12 +291,6 @@ form p {
   text-shadow: 1px 1px 1px darkslategray;
 }
 
-#label2, #guess2, #btn2,
-#label3, #guess3, #btn3,
-#setupAnswer {
-  display: none;
-}
-
 /* Medium-Large and Large Devices ============================================*/
 @media only screen and (min-width: 50rem) {
   .desktop-bg {
@@ -170,7 +299,7 @@ form p {
   .mobile-hero-desktop-header {
     background: transparent;
     min-height: 0;
-    height: 172px;
+    height: 10.75rem;
   }
   h1 {
     padding: 5.25rem 1rem 0 4rem;
@@ -206,7 +335,6 @@ form p {
     height: 30.75rem;
   }
   form {
-    padding-top: 0;
     text-align: left;
   }
   form input[type='text'] {
