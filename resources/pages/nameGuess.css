@@ -1,12 +1,12 @@
 /* Hero Header */
 .mobile-hero-desktop-header {
   min-height: 0;
+  background: center / cover no-repeat url('../images/EmmyBookBag2021Cropped.jpg');
 }
 
 h1 {
   padding: 5.25rem 1rem 0;
   width: 10.5rem;
-  text-shadow: 2px 2px 2px #ffffff54, -2px -2px 2px #ffffff54, -2px 2px 2px #ffffff54, 2px -2px 2px #ffffff54;
 }
 
 /* Intro */
@@ -137,15 +137,17 @@ form p {
 /* Medium-Large and Large Devices */
 @media only screen and (min-width: 800px) {
   .desktop-bg {
-    background: lightskyblue left / contain no-repeat url('../images/TallEditEmmyBehindCurtain.jpg');
+    background: lightskyblue left / contain no-repeat url('../images/TallEditEmmyBookBag2021Resized.jpg');
   }
   .mobile-hero-desktop-header {
+    background: transparent;
     height: auto;
   }
   h1 {
     padding: 5.25rem 1rem 0 4rem;
     width: 10.5rem;
     display: inline-block;
+    text-shadow: 2px 2px 2px #ffffff80, -2px -2px 2px #ffffff80, -2px 2px 2px #ffffff80, 2px -2px 2px #ffffff80;
   }
   #intro {
     display: inline-block;
