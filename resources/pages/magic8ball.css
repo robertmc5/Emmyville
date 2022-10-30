@@ -131,7 +131,7 @@
 /* Hero Header */
 .mobile-hero-desktop-header {
   min-height: 62.75rem;
-  background: center / cover no-repeat url('../images/EmmyPrincessLeiaCropped.jpg');
+  background: center / cover no-repeat url('../images/Mobile-EightBall.jpg');
   position: relative;
 }
 
@@ -218,7 +218,7 @@ form input[type='button']:hover {
 }
 
 form input[type='button']:active {
-  background-color: rgb(30, 144, 255)
+  background-color: rgb(30, 144, 255);
 }
 
 #answer {
@@ -291,10 +291,10 @@ form input[type='button']:active {
   text-shadow: 1px 1px 1px darkslategray;
 }
 
-/* Medium-Large and Large Devices ============================================*/
+/* Medium-Large and Large Devices  ========================================= */
 @media only screen and (min-width: 50rem) {
   .desktop-bg {
-    background: lightcoral left / contain no-repeat url('../images/TallEditEmmyPrincessLeiaResized.jpg');
+    background: lightcoral left / contain no-repeat url('../images/Desktop-EightBall.jpg');
   }
   .mobile-hero-desktop-header {
     background: transparent;

@@ -24,14 +24,14 @@ function answerQuestion() {
   let showPlace = document.getElementById('answer');
 
   let show8ball = document.createElement('img');
-  show8ball.src = "../images/Eight-ball_640x636.png";
+  show8ball.src = "../images/EightBall-BilliardBall.png";
   show8ball.id = 'magicBall';
   show8ball.style.width = '12.5rem';
   show8ball.style.opacity = '0';
   showPlace.appendChild(show8ball);
 
   let showCatFace = document.createElement('img');
-  showCatFace.src = "../images/EmmyPrincessLeiaFace.png";
+  showCatFace.src = "../images/EightBall-CatFace.png";
   showCatFace.id = 'catFace';
   showCatFace.style.width = '12.5rem';
   showCatFace.style.opacity = '0';

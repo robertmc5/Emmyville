@@ -1,7 +1,7 @@
 /* Hero Header */
 .mobile-hero-desktop-header {
   min-height: 0;
-  background: center / cover no-repeat url('../images/EmmyBookBag2021Cropped.jpg');
+  background: center / cover no-repeat url('../images/Mobile-NameGuess.jpg');
 }
 
 h1 {
@@ -16,14 +16,14 @@ h1 {
 
 /* Game Header */
 .game-header {
-  border-top: 32px solid #bbbbcc;
+  border-top: 2rem solid #bbbbcc;
   background-color: lightskyblue;
 }
 
 /* Game Section */
 #games {
   border-top: none;
-  padding: 0 1rem 42px;
+  padding: 0 1rem 2.625rem;
   background-color: lightskyblue;
   width: 100%;
   position: relative;
@@ -89,6 +89,14 @@ form p {
   text-shadow: 1px 1px 1px black;
 }
 
+/* Optional elements for second and third guesses and answer reveal */
+#label2, #guess2, #btn2,
+#label3, #guess3, #btn3,
+#setupAnswer {
+  display: none;
+}
+
+/* Nav buttons */
 #games > a {
   text-decoration: none;
   border-radius: 7px;
@@ -128,16 +136,10 @@ form p {
   text-shadow: 1px 1px 1px darkslategray;
 }
 
-#label2, #guess2, #btn2,
-#label3, #guess3, #btn3,
-#setupAnswer {
-  display: none;
-}
-
-/* Medium-Large and Large Devices */
-@media only screen and (min-width: 800px) {
+/* Medium-Large and Large Devices  ========================================= */
+@media only screen and (min-width: 50rem) {
   .desktop-bg {
-    background: lightskyblue left / contain no-repeat url('../images/TallEditEmmyBookBag2021Resized.jpg');
+    background: lightskyblue left / contain no-repeat url('../images/Desktop-NameGuess.jpg');
   }
   .mobile-hero-desktop-header {
     background: transparent;
@@ -169,8 +171,8 @@ form p {
   }
   #games {
     background-color: transparent;
-    padding: 0 1rem 42px 19.5rem;
-    height: 508px;
+    padding: 0 1rem 2.625rem 19.5rem;
+    height: 31.75rem;
   }
   form {
     padding-top: 0;

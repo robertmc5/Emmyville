@@ -23,8 +23,8 @@ body {
 .mobile-hero-desktop-header {
   width: 100%;
   height: 100%;
-  min-height: 734px;
-  background: center / cover no-repeat url('resources/images/EmmyBehindCurtainCropped.png');
+  min-height: 45.875rem;
+  background: center / cover no-repeat url('./resources/images/Mobile-Mainpage.png');
 }
 
 h1 {
@@ -61,9 +61,9 @@ h1 {
 
 /* Game Section */
 #games {
-  border-top: 32px solid #bbbbcc;
+  border-top: 2rem solid #bbbbcc;
   background-color: #e6e6fa;
-  padding: 1rem 1rem 42px;
+  padding: 1rem 1rem 2.625rem;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -77,8 +77,8 @@ h1 {
 .card {
   display: flex;
   flex-direction: column;
-  width: 232px;
-  height: 313px;
+  width: 14.5rem;
+  height: 19.5625rem;
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25);
   margin-bottom: 1.5rem;
@@ -97,7 +97,7 @@ h1 {
 
 .card-image {
   width: 100%;
-  height: 232px;
+  height: 14.5rem;
   border-radius: 10px 10px 0 0;
   overflow: hidden;
 }
@@ -123,22 +123,22 @@ h1 {
   background: transparent;
 }
 
-/* Medium-Large and Large Devices */
-@media only screen and (min-width: 800px) {
+/* Medium-Large and Large Devices  ========================================= */
+@media only screen and (min-width: 50rem) {
   body {
     max-width: 90rem;
-    height: 810px;
+    height: 50.625rem;
     background-color: #bbbbcc;
   }
   .mobile-hero-desktop-header {
     background: transparent;
     min-height: 0;
-    height: 318px;
+    height: 19.875rem;
   }
   .desktop-bg {
     width: 100%;
     height: 100%;
-    background: #e6e6fa left / contain no-repeat url('resources/images/TallEditEmmyBehindCurtain.jpg');
+    background: #e6e6fa left / contain no-repeat url('./resources/images/Desktop-Mainpage.jpg');
     display: block;
   }
   h1 {
@@ -168,6 +168,6 @@ h1 {
     border-top: none;
     background-color: transparent;
     padding-left: 19.5rem;
-    height: 492px;
+    height: 30.75rem;
   }
 }

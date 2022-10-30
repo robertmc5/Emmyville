@@ -68,7 +68,7 @@ async function playGame() {
   let picked = false;
   let bottom = false;
   let right = false;
-  const mM = window.matchMedia("(min-width: 800px)");
+  const mM = window.matchMedia("(min-width: 50rem)");
   displayDirection(mM);
   mM.addEventListener('change', displayDirection);
   while (gameActive) {
