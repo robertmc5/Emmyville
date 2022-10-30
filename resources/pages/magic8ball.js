@@ -23,6 +23,15 @@ function answerQuestion() {
 
   let showPlace = document.getElementById('answer');
 
+  let nebulae = document.createElement('img');
+  nebulae.src = "../images/EightBall-Nebulae.jpg";
+  nebulae.id = 'nebulae';
+  nebulae.style.width = '100%';
+  nebulae.style.height = '100%';
+  nebulae.style.paddingTop = '1rem';
+  nebulae.style.opacity = '0.2';
+  showPlace.appendChild(nebulae);
+
   let show8ball = document.createElement('img');
   show8ball.src = "../images/EightBall-BilliardBall.png";
   show8ball.id = 'magicBall';
