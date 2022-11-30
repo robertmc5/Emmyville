@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Proza+Libre:wght@700&display=swap" rel="stylesheet">
+  <title>Emmyville Concentration</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="./concentration.css">
+  <script src="./concentration.js" defer></script>
+</head>
+<body>
+  
+  <div class="desktop-bg">
+    <div class="mobile-hero-desktop-header">
+      <h1>Concentration</h1>
+      <div id="intro">
+        <h3>How's your memory?
+          Flip over the cards
+          to see Emmy's picture.
+          Pair up the same ones.
+          There's 8 pairs total.</h3>
+      </div>
+    </div>
+    <div class="game-header">
+      <h2>How fast can you pair up
+        the same pictures of Emmy?
+        Click the timer to begin.</h2>
+    </div>
+    <div id="games">
+      <form name="timer">
+        <div>
+          <span id="minute">0</span><span>:</span><span id="second">00</span>
+        </div>
+        <button type="button" name="start">Start</button>
+      </form>
+      <div id="answer">
+      </div>
+      <a href="concentration.html#games" onclick="location.reload()" id="playAgain" >Play Again</a>
+      <a href="../../index.html#games" id="goToMain" >Main Menu</a>
+    </div>
+  </div>
+
+</body>
+</html>
