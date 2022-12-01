@@ -47,12 +47,14 @@ h1 {
   display: block;
 }
 
+/* Timer */
 form {
   width: 10rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-inline: auto;
+  margin: 0 auto;
+  padding-bottom: 1rem;
 }
 
 span {
@@ -81,42 +83,76 @@ form > button:active {
   text-shadow: 1px 1px 1px darkslategray;
 }
 
-#answer {
-  height: 14.375rem;
+/* Gameboard */
+#gameboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.unit {
+  width: 288px;
+  height: 214px;
+  display: flex;
+}
+
+.flip-btn {
+  border: thin solid darkslategray;
+  border-radius: 10px;
+  height: 95px;
+  padding: 0.375rem 0.75rem;
+  margin: 3rem 0.625rem 0 1.5rem;
+  font-size: 1rem;
+  font-family: 'Rubik', sans-serif;
+  background: linear-gradient(135deg, rgb(100, 149, 237) 0%, rgb(0, 0, 255) 100%);
+  color: white;
+  text-shadow: 1px 1px black;
+}
+
+.flip-btn:hover {
+  cursor: pointer;
+  background: rgb(50, 74, 246);
+}
+
+.flip-tile {
+  background-color: transparent;
+  perspective: 1000px;
+  width: 190px;
+  height: 190px;
+}
+
+.flip-tile-inner {
   position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25);
 }
 
-/* Animations */
-#nebulae {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  animation: opaque 3s forwards;
+.flip-tile:hover .flip-tile-inner {
+  transform: rotateY(180deg);       /* TEST - Do an horizontal flip when you move the mouse over the flip-card */
 }
 
-#magicBall {
+.flip-tile-front, .flip-tile-back {
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  animation: shaky 1s;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
 }
 
-#catFace {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  animation: shaky 1s 1s;
+.flip-tile-front {
+  background: center / cover no-repeat url('../images/Concentration-MorganTile.jpg');
 }
 
-#answerText {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  animation: shaky 1s 2s forwards, verticalOscillate 2s 3s infinite;
+.flip-tile-back {
+  background: rgb(50, 74, 246);
+  transform: rotateY(180deg);
+}
+
+.reference {
+  background-color: rgb(235, 201, 117);
 }
 
 /* Nav buttons */
@@ -161,29 +197,30 @@ form > button:active {
 
 /* Medium-Large and Large Devices  ========================================= */
 @media only screen and (min-width: 50rem) {
+  body {
+    height: auto;
+  }
   .desktop-bg {
-    background: lightcoral left / contain no-repeat url('../images/Desktop-EightBall.jpg');
+    background: goldenrod left / contain no-repeat url('../images/Desktop-Concentration.jpg');
+    height: 16.4375rem;
   }
   .mobile-hero-desktop-header {
     background: transparent;
     min-height: 0;
-    height: 10.75rem;
+    height: 7.25rem;
   }
   h1 {
-    padding: 5.25rem 1rem 0 4rem;
-    width: 10.5rem;
+    padding: 1rem 1.5rem 0 1.5rem;
+    width: 18rem;
     display: inline-block;
   }
   #intro {
     display: inline-block;
-  }
-  #eight-ball {
-    top: 1rem;
-    left: 35.5rem;
+    vertical-align: top;
   }
   #intro h3 {
-    width: 25rem;
-    padding: 1rem 0 0 9rem;
+    width: 27rem;
+    padding: 1rem 0 0 1rem;
     margin-top: 0;
   }
   .game-header {
@@ -191,25 +228,28 @@ form > button:active {
     background-color: transparent;
   }
   .game-header h2 {
-    width: 30rem;
-    margin-left: 38%;
-    padding: 3.5rem 0 1.5rem;
+    width: 23.5rem;
+    margin-left: 18rem;
+    padding: 1.5rem 1rem 1.5rem 1rem;
     color: #1f1f1f;
     text-shadow: none;
-  }
-  #games {
-    background-color: transparent;
-    padding: 0 1rem 2.625rem 19.5rem;
-    height: 30.75rem;
-  }
-  form {
     text-align: left;
   }
-  form input[type='text'] {
-    width: 25rem;
+  #games {
+    background-color: goldenrod;
+    padding: 0 1rem 2.625rem 1rem;
+    height: auto;
   }
-  #answer {
-    height: 19.375rem;
+  form {
+    width: 30rem;
+    margin: 0 0;
+    padding: 1rem 0 1rem 19rem;
+  }
+  .reference {
+    background-color: inherit;
+  }
+  #games > #playAgain {
+    margin-left: 18rem;
   }
 }
  

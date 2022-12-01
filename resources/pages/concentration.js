@@ -4,12 +4,17 @@ let seconds = 0;
 let chronology;
 let stopWatch = document.timer.start;
 
-stopWatch.addEventListener('click', startTimer);
+stopWatch.addEventListener('click', startGame);
 
-function startTimer() {
-  // clearInterval(chronology);
+function startGame() {
+  //                                           clearInterval(chronology); <-- Need at game completion?
+  // Set timer in motion
   chronology = setInterval(() => {timer();}, 1000);
-  stopWatch.removeEventListener('click', startTimer);
+  stopWatch.removeEventListener('click', startGame);
+
+  // Activate flip tile button click event listeners
+  activateTiles();
+  
 }
 
 function timer() {
@@ -24,4 +29,18 @@ function timer() {
 
 function renderSeconds(time) {
   return time >= 10 ? time : `0${time}`;
+}
+
+// Register click event listener on flip tile buttons
+let flipBtns = Array.from(document.getElementsByClassName('flip-btn'));
+const activateTiles = () => {
+  flipBtns.forEach(flipBtn => {
+    flipBtn.addEventListener('click', flipTile);
+  });
+};
+
+// Flip tile to reveal image underneath
+function flipTile(e) {
+  current = e.currentTarget;
+  current.style.background = 'crimson';
 }
