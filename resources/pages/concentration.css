@@ -130,10 +130,6 @@ form > button:active {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25);
 }
 
-.flip-tile:hover .flip-tile-inner {
-  transform: rotateY(180deg);       /* TEST - Do an horizontal flip when you move the mouse over the flip-card */
-}
-
 .flip-tile-front, .flip-tile-back {
   position: absolute;
   width: 100%;
@@ -147,7 +143,6 @@ form > button:active {
 }
 
 .flip-tile-back {
-  background: rgb(50, 74, 246);
   transform: rotateY(180deg);
 }
 
