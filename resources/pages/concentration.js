@@ -15,9 +15,10 @@ function startGame() {
   stopWatch.removeEventListener('click', startGame);
   stopWatch.textContent = "Go";
   stopWatch.style.width = "3.9375rem";
+  stopWatch.style.background = "rgb(0, 179, 0)";
+  stopWatch.style.cursor = "default";
   // Activate Flip tile button click event listeners
   activateTiles();
-  //      stopWatch.textContent = "Done";      clearInterval(chronology); <-- Need at game completion?    TODO
 }
 
 // Update timer and render current time
@@ -34,6 +35,15 @@ function updateTimer() {
 // Helper function to render seconds correctly
 function renderSeconds(time) {
   return time >= 10 ? time : `0${time}`;
+}
+
+// Stop timer and end game
+function endGame() {
+  // Stop timer
+  clearInterval(chronology);
+  // Change appearance of Start/Go button
+  stopWatch.textContent = "Done";
+  stopWatch.style.background = "rgb(0, 150, 0)";
 }
 
 // Register click event listener on Flip tile buttons
@@ -54,7 +64,7 @@ let activateTile = (current, tileNum) => {
   // Flip the tile over to the back side
   let currentTileInner = current.nextElementSibling.getElementsByClassName('flip-tile-inner')[0];
   currentTileInner.style.transform = 'rotateY(180deg)';
-  currentTileInner.getElementsByClassName('flip-tile-back')[0].style.background = gameTileBacks[tileNum];
+  currentTileInner.getElementsByClassName('flip-tile-back')[0].style.background = gameTileBacks[tileNum].path;
 }
 
 // Helper functions to return hover condition (background) of button
@@ -83,7 +93,31 @@ let limitButton = (current) => {
   current.addEventListener('mouseleave', btnLeave);
 }
 
-// Flip tile if able
+// Designate tiles as matching
+let matches = 0;
+let matchingTiles = activeTiles => {
+  flipBtns.forEach(flipBtn => {
+    if (activeTiles.includes(flipBtn.getAttribute('data-pic'))) {
+      // Change matching buttons appearances
+      flipBtn.style.background = 'rgb(0, 150, 0)';
+      flipBtn.innerText = 'Match';
+      flipBtn.style.padding = '0';
+      flipBtn.style.cursor = 'default';
+      // Remove flip button event listeners
+      flipBtn.removeEventListener('click', flipTile);
+      flipBtn.removeEventListener('mouseenter', btnHover);
+      flipBtn.removeEventListener('mouseleave', btnLeave);
+    }
+  })
+  // Count matches
+  matches ++;
+  // Reset active tile limit
+  activeTileBacks = [];
+  // End game if needed
+  if (matches == 8) endGame();
+}
+
+// Flip tile if able  =========================================================
 let activeTileBacks = [];
 console.log('let activeTileBacks = []: ', activeTileBacks.length, activeTileBacks);        /* TEST */
 function flipTile(e) {
@@ -94,6 +128,13 @@ function flipTile(e) {
     if (activeTileBacks[0] !== tileNum) {
       activeTileBacks.push(tileNum);
       activateTile(current, tileNum);
+      // See if two active tiles are a match                           TODO
+      if (activeTileBacks.length == 2) {
+        if (gameTileBacks[activeTileBacks[0]].pair === gameTileBacks[activeTileBacks[1]].pair) {
+          console.log('See if two active tiles are a match: ', activeTileBacks, 'MATCH');      /* TEST */
+          matchingTiles(activeTileBacks);
+        }
+      }
       console.log('(activeTileBacks.length <= 1): ', activeTileBacks.length, activeTileBacks);      /* TEST */
     }
     else {
@@ -110,28 +151,29 @@ function flipTile(e) {
     inactivateTile(current);
   }
   else {
+    // Refuse to allow tile to flip to backside
     console.log('NO QUALIFICATION: ', activeTileBacks.length, activeTileBacks);        /* TEST */
     limitButton(current);
   }
 }
 
 // Array of paths to the pictures on the back of the tiles
-const tileBackPics = ["center / cover no-repeat url('../images/Concentration-EmmyBedCircle.jpg')",
-  "center / cover no-repeat url('../images/Concentration-EmmyBlackBag.jpg')",
-  "center / cover no-repeat url('../images/Concentration-EmmyFigurine.jpg')",
-  "center / cover no-repeat url('../images/Concentration-EmmyInCar.jpg')",
-  "center / cover no-repeat url('../images/Concentration-EmmyLisa.jpg')",
-  "center / cover no-repeat url('../images/Concentration-EmmyOnRob.jpg')",
-  "center / cover no-repeat url('../images/Concentration-EmmyPawsWindow.jpg')",
-  "center / cover no-repeat url('../images/Concentration-EmmySuitcase.jpg')",
-  "center / cover no-repeat url('../images/Concentration-EmmyBedCircle.jpg')",
-  "center / cover no-repeat url('../images/Concentration-EmmyBlackBag.jpg')",
-  "center / cover no-repeat url('../images/Concentration-EmmyFigurine.jpg')",
-  "center / cover no-repeat url('../images/Concentration-EmmyInCar.jpg')",
-  "center / cover no-repeat url('../images/Concentration-EmmyLisa.jpg')",
-  "center / cover no-repeat url('../images/Concentration-EmmyOnRob.jpg')",
-  "center / cover no-repeat url('../images/Concentration-EmmyPawsWindow.jpg')",
-  "center / cover no-repeat url('../images/Concentration-EmmySuitcase.jpg')"];
+const tileBackPics = [{'path': "center / cover no-repeat url('../images/Concentration-EmmyBedCircle.jpg')", 'pair': 1},
+  {'path': "center / cover no-repeat url('../images/Concentration-EmmyBlackBag.jpg')", 'pair': 2},
+  {'path': "center / cover no-repeat url('../images/Concentration-EmmyFigurine.jpg')", 'pair': 3},
+  {'path': "center / cover no-repeat url('../images/Concentration-EmmyInCar.jpg')", 'pair': 4},
+  {'path': "center / cover no-repeat url('../images/Concentration-EmmyLisa.jpg')", 'pair': 5},
+  {'path': "center / cover no-repeat url('../images/Concentration-EmmyOnRob.jpg')", 'pair': 6},
+  {'path': "center / cover no-repeat url('../images/Concentration-EmmyPawsWindow.jpg')", 'pair': 7},
+  {'path': "center / cover no-repeat url('../images/Concentration-EmmySuitcase.jpg')", 'pair': 8},
+  {'path': "center / cover no-repeat url('../images/Concentration-EmmyBedCircle.jpg')", 'pair': 1},
+  {'path': "center / cover no-repeat url('../images/Concentration-EmmyBlackBag.jpg')", 'pair': 2},
+  {'path': "center / cover no-repeat url('../images/Concentration-EmmyFigurine.jpg')", 'pair': 3},
+  {'path': "center / cover no-repeat url('../images/Concentration-EmmyInCar.jpg')", 'pair': 4},
+  {'path': "center / cover no-repeat url('../images/Concentration-EmmyLisa.jpg')", 'pair': 5},
+  {'path': "center / cover no-repeat url('../images/Concentration-EmmyOnRob.jpg')", 'pair': 6},
+  {'path': "center / cover no-repeat url('../images/Concentration-EmmyPawsWindow.jpg')", 'pair': 7},
+  {'path': "center / cover no-repeat url('../images/Concentration-EmmySuitcase.jpg')", 'pair': 8}];
 
 // Randomly shuffle array
 const shuffleArray = array => {
