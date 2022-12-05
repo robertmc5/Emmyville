@@ -67,7 +67,7 @@ function activateTiles() {
 let activateTile = (current, tileNum) => {
   // Change button color
   current.style.background = 'crimson';
-  // Remove hover listeners of inactive state if relevant
+  // Remove hover listeners of inactive state
   current.removeEventListener('mouseenter', btnHover);
   current.removeEventListener('mouseleave', btnLeave);
   // Flip the tile over to the back side
@@ -128,40 +128,33 @@ let matchingTiles = activeTiles => {
 
 // Flip tile if able  =========================================================
 let activeTileBacks = [];
-console.log('let activeTileBacks = []: ', activeTileBacks.length, activeTileBacks);        /* TEST */
 function flipTile(e) {
   let current = e.currentTarget;
   let tileNum = current.getAttribute('data-pic');
-  console.log(tileNum, activeTileBacks.length, activeTileBacks);                       /* TEST */
   if (activeTileBacks.length <= 1) {
     if (activeTileBacks[0] !== tileNum) {
       activeTileBacks.push(tileNum);
       activateTile(current, tileNum);
-      // See if two active tiles are a match                           TODO
+      // Check if two active tiles are a match
       if (activeTileBacks.length == 2) {
         if (gameTileBacks[activeTileBacks[0]].pair === gameTileBacks[activeTileBacks[1]].pair) {
-          console.log('See if two active tiles are a match: ', activeTileBacks, 'MATCH');      /* TEST */
           matchingTiles(activeTileBacks);
         }
       }
-      console.log('(activeTileBacks.length <= 1): ', activeTileBacks.length, activeTileBacks);      /* TEST */
     }
     else {
       activeTileBacks.pop();
-      //Flip the tile BACK to front AND change button color BACK to blue gradient
-      console.log('activeTileBacks.pop(): ', activeTileBacks.length, activeTileBacks);        /* TEST */
+      //Flip the tile to front and change button color back to blue gradient
       inactivateTile(current);
     }
   }
   else if (activeTileBacks.length == 2 && activeTileBacks.includes(tileNum)) {
     activeTileBacks.splice(activeTileBacks.indexOf(tileNum), 1);
-    //Flip the tile BACK to front AND change button color BACK to blue gradient
-    console.log('length = 2 && activeTileBacks.includes(tileNum): ', activeTileBacks.length, activeTileBacks); /* TEST */ 
+    //Flip the tile to front and change button color back to blue gradient
     inactivateTile(current);
   }
   else {
     // Refuse to allow tile to flip to backside
-    console.log('NO QUALIFICATION: ', activeTileBacks.length, activeTileBacks);        /* TEST */
     limitButton(current);
   }
 }
