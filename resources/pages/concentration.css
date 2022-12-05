@@ -83,6 +83,13 @@ form > button:active {
   text-shadow: 1px 1px 1px darkslategray;
 }
 
+#feedback {
+  font-size: 2rem;
+  font-style: italic;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
 /* Gameboard */
 #gameboard {
   display: flex;
@@ -232,14 +239,19 @@ form > button:active {
     text-align: left;
   }
   #games {
-    background-color: goldenrod;
-    padding: 0 1rem 2.625rem 1rem;
     height: auto;
   }
   form {
     width: 30rem;
     margin: 0 0;
     padding: 1rem 0 1rem 19rem;
+    display: inline-flex;
+  }
+  #feedback {
+    text-align: left;
+    display: inline-block;
+    padding-bottom: 0;
+    padding-left: 3rem;
   }
   .reference {
     background-color: inherit;

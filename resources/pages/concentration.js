@@ -7,7 +7,7 @@ let stopWatch = document.timer.start;
 // Register click event listener on Start button
 stopWatch.addEventListener('click', startGame);
 
-// Activate timer and game
+// Activate timer and start game
 function startGame() {
   // Set timer in motion
   chronology = setInterval(() => {updateTimer();}, 1000);
@@ -17,7 +17,7 @@ function startGame() {
   stopWatch.style.width = "3.9375rem";
   stopWatch.style.background = "rgb(0, 179, 0)";
   stopWatch.style.cursor = "default";
-  // Activate Flip tile button click event listeners
+  // Activate flip tile button click event listeners
   activateTiles();
 }
 
@@ -44,6 +44,15 @@ function endGame() {
   // Change appearance of Start/Go button
   stopWatch.textContent = "Done";
   stopWatch.style.background = "rgb(0, 150, 0)";
+  if (minutes > 0) {
+    document.getElementById('feedback').innerText = "Nice job!";
+  }
+  else if (minutes == 0 && seconds > 45) {
+    document.getElementById('feedback').innerText = "That was fast!";
+  }
+  else if (minutes == 0 && seconds <= 45) {
+    document.getElementById('feedback').innerText = "Impressive!";
+  }
 }
 
 // Register click event listener on Flip tile buttons
