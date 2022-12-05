@@ -339,6 +339,7 @@ form input[type='button']:active {
 @media only screen and (min-width: 50rem) {
   .desktop-bg {
     background: lightcoral left / contain no-repeat url('../images/Desktop-EightBall.jpg');
+    height: auto;
   }
   .mobile-hero-desktop-header {
     background: transparent;

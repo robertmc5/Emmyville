@@ -140,6 +140,7 @@ form p {
 @media only screen and (min-width: 50rem) {
   .desktop-bg {
     background: lightskyblue left / contain no-repeat url('../images/Desktop-NameGuess.jpg');
+    height: auto;
   }
   .mobile-hero-desktop-header {
     background: transparent;
