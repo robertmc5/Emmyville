@@ -347,8 +347,8 @@ form input[type='button']:active {
     height: 10.75rem;
   }
   h1 {
-    padding: 5.25rem 1rem 0 4rem;
-    width: 10.5rem;
+    padding: 5.25rem 0 0 4rem;
+    width: 11.5rem;
     display: inline-block;
   }
   #intro {
@@ -359,8 +359,8 @@ form input[type='button']:active {
     left: 35.5rem;
   }
   #intro h3 {
-    width: 25rem;
-    padding: 1rem 0 0 9rem;
+    width: 24rem;
+    padding: 1rem 0 0 8rem;
     margin-top: 0;
   }
   .game-header {
@@ -368,8 +368,8 @@ form input[type='button']:active {
     background-color: transparent;
   }
   .game-header h2 {
-    width: 30rem;
-    margin-left: 38%;
+    width: 27rem;
+    margin-left: 40%;
     padding: 3.5rem 0 1.5rem;
     color: #1f1f1f;
     text-shadow: none;

@@ -147,8 +147,8 @@ form p {
     height: auto;
   }
   h1 {
-    padding: 5.25rem 1rem 0 4rem;
-    width: 10.5rem;
+    padding: 5.25rem 0 0 4rem;
+    width: 14rem;
     display: inline-block;
     text-shadow: 2px 2px 2px #ffffff80, -2px -2px 2px #ffffff80, -2px 2px 2px #ffffff80, 2px -2px 2px #ffffff80;
   }
@@ -156,8 +156,8 @@ form p {
     display: inline-block;
   }
   #intro h3 {
-    width: 36rem;
-    padding: 1rem 0 0 9rem;
+    width: 30rem;
+    padding: 1rem 0 0 4.5rem;
   }
   .game-header {
     border-top: none;
@@ -172,7 +172,7 @@ form p {
   }
   #games {
     background-color: transparent;
-    padding: 0 1rem 2.625rem 19.5rem;
+    padding: 0 1rem 2.625rem 18.5rem;
     height: 31.75rem;
   }
   form {
